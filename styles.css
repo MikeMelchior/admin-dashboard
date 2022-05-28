@@ -26,10 +26,12 @@ body, html {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
+
     .top-section, .bottom-section {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
+
     .header .top-section {
         grid-area: 1 / 1 / 2 / 3;
     }
@@ -39,6 +41,7 @@ body, html {
         .notifications {
             grid-column: 2/3;
         }
+
     .header .bottom-section {
         grid-area: 2 / 1 / 3 / 3;
     }
@@ -48,10 +51,6 @@ body, html {
         .interation-bar {
             grid-column: 2/3;
         }
-    
-    
-
-
 
 
 .sidebar {
@@ -60,58 +59,79 @@ body, html {
     grid-template-rows: 2fr 6fr 3fr 5fr;
 }
 
-.logo {
-    grid-row: 1 / 2;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-    .logo img {
-        grid-column: 1 / 2;
-        place-self: center;
+    .logo {
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
     }
 
-    .logo p {
-        grid-column: 2 / 3;
-        justify-self: stretch;
+        .logo img {
+            grid-column: 1 / 2;
+            place-self: center;
+        }
+
+        .logo p {
+            grid-column: 2 / 3;
+            justify-self: stretch;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+    .links {
+        grid-row: 2 / 3;
         display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        font-weight: 600;
+        flex-direction: column;
+        padding: 15px 30px;
     }
 
-.links {
-    grid-row: 2 / 3;
-    display: flex;
-    flex-direction: column;
-    padding: 15px 30px;
-}
+        .links p {
+            flex: auto;
+            padding: 5px;
+        }
 
-.links p {
-    flex: auto;
-    padding: 5px;
-}
+    .options {
+        grid-row: 3 / 4;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
 
-.options {
-    grid-row: 3 / 4;
-    display: flex;
-    flex-direction: column;
-    padding: 15px 30px;
-}
-
-.options p {
-    flex: auto;
-    padding: 5px;
-}
-
-
-
-
-
+        .options p {
+            flex: auto;
+            padding: 5px;
+        }
 
 
 
 
 .main {
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr 1fr;
 }
+
+    .projects {
+        grid-area: 2 / 1 / 5 / 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: 0rem 2rem;
+        gap: 1rem;
+    }
+        .projects > div {
+            border-radius: 1rem;
+        }
+
+    .announcements {
+        display: grid;
+        grid-row: 2 / 3;
+        grid-template-rows: 1fr 1fr 1fr;
+        border-radius: 1rem;
+    }
+
+    .trending {
+        display: grid;
+        grid-row: 4 / 5;
+    }
