@@ -8,7 +8,7 @@
 body, html {
     font-family: 'Roboto Slab', serif;
     background-color: #0c4a6e;
-    color: #bae6fd;
+    color: whitesmoke;
 }
 
 .container {
@@ -36,7 +36,22 @@ body, html {
     }
         .search-bar {
             grid-column: 1/2;
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
         }
+            .search-bar input {
+                margin: 0rem 1rem;
+                padding-left: 1rem;
+                border-radius: 1rem;
+                height: 35%;
+                background-color: #0284c7;
+                color: whitesmoke;
+                font-weight: 700;
+                font-size: larger;
+                flex: auto;
+            }
+
         .notifications {
             grid-column: 2/3;
         }
@@ -90,7 +105,7 @@ body, html {
             align-items: center;
             margin: 0.5rem 0rem;
         }
-        .links img, .options img {
+        .links img, .options img, .search-bar img {
             height: 30px;
         }
         .links p, .options p {
