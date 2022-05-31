@@ -112,10 +112,13 @@ body, html {
                 width: 20%;
                 min-width: 70px;
                 border-radius: 20px;
-                border: 1px solid #bae6fd;
+                border: none;
                 color: whitesmoke;
                 font-weight: 600;
-                font-size: 1rem;
+                font-size: 0.9rem;
+            }
+            .interaction-bar button:hover {
+                transform: scale(1.05);
             }
 
 
@@ -183,7 +186,7 @@ body, html {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 4fr 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr 0.5fr;
     background-color: #075985;
     padding-right: 5px;
     box-shadow: inset 0px 4px 7px -3px #0284c7;
@@ -195,23 +198,28 @@ body, html {
         font-weight: 500;
         
     }
-    .main p:first-child {
+    #your-projects {
         margin-left: 2rem;
     }
     .projects {
         grid-area: 2 / 1 / 5 / 2;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         margin: 0rem 2rem;
-        gap: 1rem;
+        gap: 1.5rem;
     }
         .projects > div {
             background-color: #0c4a6e;
-            border-radius: 1rem;
+            border-left: 4px solid whitesmoke;
+            border-radius: 0.5rem;
             display: flex;
             justify-content: center;
+            min-height: 180px;
             align-items: center;
             box-shadow: 4px 4px 9px -2px #0284c7;
+        }
+        .projects > div:hover {
+            transform: scale(1.01);
         }
             .projects > div > div {
                 display: grid;
@@ -222,6 +230,10 @@ body, html {
                 .inner-card > p {
                     grid-row: 1/2;
                     margin: 0;
+                }
+                .inner-card > p::first-line {
+                    font-size: 1.3rem;
+                    font-weight: 600;
                 }
                 .inner-card div {
                     grid-row: 2/3;
