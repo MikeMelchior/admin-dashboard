@@ -89,14 +89,16 @@ body, html {
             .welcome-bar .profile-pic {
                 height: 4.5rem;
                 width: auto;
-                margin-left: 5rem;
+                margin-left: 4rem;
             }
-            .welcome-bar .bigger {
+            .welcome-bar p {
+                padding-left: 1.5rem;
                 font-size: 1.6rem;
                 letter-spacing: 0.1rem;
+                flex: auto;
             }
-            .welcome-bar span {
-                padding-left: 1.5rem;
+            .welcome-bar p::first-line {
+                font-size: 0.8rem;
             }
         .interaction-bar {
             grid-column: 2/3;
@@ -155,7 +157,7 @@ body, html {
             align-items: center;
             margin: 0.5rem 0rem;
         }
-        .links img, .options img, .search-bar img {
+        .links img, .options img, .search-bar img, .inner-card img {
             height: 30px;
         }
         .links p, .options p {
@@ -184,6 +186,7 @@ body, html {
     grid-template-rows: 1fr 4fr 1fr 4fr 1fr;
     background-color: #075985;
     padding-right: 5px;
+    box-shadow: inset 0px 4px 7px -3px #0284c7;
 }
     .main > p {
         align-self: end;
@@ -203,8 +206,31 @@ body, html {
         gap: 1rem;
     }
         .projects > div {
+            background-color: #0c4a6e;
             border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 4px 4px 9px -2px #0284c7;
         }
+            .projects > div > div {
+                display: grid;
+                grid-template-rows: 1fr 30px;
+                height: 85%;
+                width: 85%;
+            }
+                .inner-card > p {
+                    grid-row: 1/2;
+                    margin: 0;
+                }
+                .inner-card div {
+                    grid-row: 2/3;
+                    display: flex;
+                    margin-left: auto;
+                }
+                .inner-card div > .middle-link {
+                    padding: 0rem 1.3rem;
+                }
 
     .announcements {
         display: grid;
