@@ -245,10 +245,36 @@ body, html {
                 }
 
     .announcements {
-        display: grid;
         grid-row: 2 / 3;
-        grid-template-rows: 1fr 1fr 1fr;
         border-radius: 1rem;
+        background-color: #0c4a6e;
+        box-shadow: 4px 4px 9px -2px #0284c7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .announcements > div {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 90%;
+        width: 80%;
+    }
+    .announcements > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10px 0px;
+        font-size: 0.8rem;
+    }
+    .announcements > div > div > p:first-child {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .announcements > div > .middle {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
     }
 
     .trending {
